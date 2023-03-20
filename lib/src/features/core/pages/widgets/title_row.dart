@@ -1,3 +1,4 @@
+import 'package:dev_mate/src/constants/constants.dart';
 import 'package:flutter/material.dart';
 
 class TittleRow extends StatefulWidget {
@@ -5,12 +6,10 @@ class TittleRow extends StatefulWidget {
     super.key,
     required this.title1,
     required this.title2,
-
   });
 
   final String title1;
   final String title2;
-
 
   @override
   State<TittleRow> createState() => _TittleRowState();
@@ -27,7 +26,7 @@ class _TittleRowState extends State<TittleRow> {
           Text(
             widget.title1,
             style: const TextStyle(
-              color: Colors.black,
+              color: textColor,
               fontWeight: FontWeight.bold,
               fontSize: 16,
             ),
@@ -35,7 +34,7 @@ class _TittleRowState extends State<TittleRow> {
           Text(
             widget.title2,
             style: const TextStyle(
-              color: Colors.red,
+              color: textColor2,
               fontWeight: FontWeight.w600,
             ),
           ),

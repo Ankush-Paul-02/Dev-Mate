@@ -40,28 +40,17 @@ class _CategoryListState extends State<CategoryList> {
                 title2: "See All",
               ),
               SizedBox(
-                height: defaultPadding,
+                height: 25,
               ),
-              DeveloperList(),
+              DeveloperCard(),
               SizedBox(
-                height: 20,
+                height: 25,
               ),
-              DeveloperList(),
+              DeveloperCard(),
             ],
           ),
         ),
       ],
     );
-  }
-}
-
-class DeveloperList extends StatelessWidget {
-  const DeveloperList({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return const DeveloperCard();
   }
 }

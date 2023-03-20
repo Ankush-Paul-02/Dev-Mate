@@ -23,12 +23,12 @@ class SearchCard extends StatelessWidget {
             BlendMode.darken,
           ),
         ),
-        boxShadow: [
+        boxShadow: const [
           BoxShadow(
-            color: Colors.grey.withOpacity(0.5),
-            spreadRadius: 0,
-            blurRadius: 4,
-            offset: const Offset(4, 8),
+            color: textColor2,
+            spreadRadius: 1,
+            blurRadius: 5,
+            offset: Offset(0, 3),
           ),
         ],
       ),

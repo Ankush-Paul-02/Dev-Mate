@@ -1,4 +1,5 @@
 import 'package:dev_mate/src/constants/constants.dart';
+import 'package:dev_mate/src/features/core/pages/profile_page.dart';
 import 'package:flutter/material.dart';
 
 class HomeAppBar extends StatelessWidget {
@@ -7,6 +8,7 @@ class HomeAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      color: backgroundColor1,
       padding: const EdgeInsets.all(25),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -17,7 +19,7 @@ class HomeAppBar extends StatelessWidget {
               Text(
                 'Welcome Home',
                 style: TextStyle(
-                  color: Colors.grey,
+                  color: textColor3,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -27,6 +29,7 @@ class HomeAppBar extends StatelessWidget {
               Text(
                 'Paul Ankush',
                 style: TextStyle(
+                  color: textColor,
                   fontWeight: FontWeight.bold,
                   fontSize: 28,
                 ),
@@ -40,10 +43,10 @@ class HomeAppBar extends StatelessWidget {
                 transform: Matrix4.rotationZ(100),
                 child: Stack(
                   children: [
-                    const Icon(
+                    Icon(
                       Icons.notifications_none_outlined,
                       size: 30,
-                      color: Colors.grey,
+                      color: textColor.withOpacity(0.6),
                     ),
                     Positioned(
                       top: 0,
@@ -51,7 +54,7 @@ class HomeAppBar extends StatelessWidget {
                       child: Container(
                         padding: const EdgeInsets.all(4),
                         decoration: const BoxDecoration(
-                          color: Colors.red,
+                          color: textColor2,
                           shape: BoxShape.circle,
                         ),
                       ),
@@ -62,11 +65,20 @@ class HomeAppBar extends StatelessWidget {
               const SizedBox(
                 width: 20,
               ),
-              const CircleAvatar(
-                backgroundImage: NetworkImage(
-                  'https://images.unsplash.com/photo-1587620962725-abab7fe55159?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8ZGV2ZWxvcGVyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1000&q=60',
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const ProfileScreen(),
+                    ),
+                  );
+                },
+                child: const CircleAvatar(
+                  backgroundImage: NetworkImage(
+                      'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8c29mdHdhcmUlMjBkZXZlbG9wZXIlMjBmYWNlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=400&q=60'),
+                  radius: 25,
                 ),
-                radius: 25,
               )
             ],
           ),

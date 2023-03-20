@@ -1,5 +1,6 @@
+import 'package:dev_mate/src/constants/constants.dart';
 import 'package:dev_mate/src/features/core/pages/widgets/category_list.dart';
-import 'package:dev_mate/src/features/core/pages/widgets/home_appbar.dart';
+import 'package:dev_mate/src/features/core/pages/widgets/home_app_bar.dart';
 import 'package:dev_mate/src/features/core/pages/widgets/search_card.dart';
 import 'package:flutter/material.dart';
 
@@ -8,9 +9,9 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
     return SafeArea(
       child: Scaffold(
+        backgroundColor: backgroundColor1,
         body: SingleChildScrollView(
           scrollDirection: Axis.vertical,
           child: Stack(
@@ -23,9 +24,7 @@ class HomePage extends StatelessWidget {
                   ),
                   Expanded(
                     flex: 1,
-                    child: Container(
-                      color: Colors.grey.withOpacity(0.1),
-                    ),
+                    child: Container(),
                   ),
                 ],
               ),

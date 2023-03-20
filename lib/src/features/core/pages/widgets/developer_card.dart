@@ -14,10 +14,18 @@ class DeveloperCard extends StatelessWidget {
         height: 250,
         width: double.infinity,
         decoration: const BoxDecoration(
-          color: primaryColor,
+          color: backgroundColor2,
           borderRadius: BorderRadius.all(
             Radius.circular(25),
           ),
+          boxShadow: [
+            BoxShadow(
+              color: textColor2,
+              blurRadius: 3,
+              spreadRadius: -3,
+              offset: Offset(0, 5),
+            ),
+          ],
         ),
         child: Padding(
           padding: const EdgeInsets.all(25),
@@ -36,7 +44,7 @@ class DeveloperCard extends StatelessWidget {
                   Text(
                     'Sofia Paul',
                     style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                          color: Colors.white,
+                          color: textColor,
                         ),
                   ),
                   Container(
@@ -60,7 +68,7 @@ class DeveloperCard extends StatelessWidget {
               Text(
                 'Future Institute of Engineering and ManageMent',
                 style: Theme.of(context).textTheme.titleMedium!.copyWith(
-                      color: Colors.white,
+                      color: textColor3,
                       overflow: TextOverflow.ellipsis,
                     ),
               ),
@@ -73,7 +81,7 @@ class DeveloperCard extends StatelessWidget {
                   Text(
                     'Information Technology',
                     style: Theme.of(context).textTheme.titleSmall!.copyWith(
-                          color: Colors.white,
+                          color: textColor3,
                           overflow: TextOverflow.ellipsis,
                         ),
                   ),
@@ -95,14 +103,14 @@ class DeveloperCard extends StatelessWidget {
                   Text(
                     'Flutter Developer',
                     style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                          color: const Color.fromARGB(255, 3, 49, 86),
+                          color: textColor2,
                           overflow: TextOverflow.ellipsis,
                         ),
                   ),
                   Text(
                     '9 Projects',
                     style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                          color: const Color.fromARGB(255, 3, 49, 86),
+                          color: textColor2,
                           overflow: TextOverflow.ellipsis,
                         ),
                   ),

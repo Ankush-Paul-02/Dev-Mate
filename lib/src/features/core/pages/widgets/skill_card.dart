@@ -18,16 +18,16 @@ class SkillCard extends StatelessWidget {
         height: 100,
         width: 100,
         decoration: const BoxDecoration(
-          color: Color(0xffF2F7FF),
+          color: backgroundColor3,
           borderRadius: BorderRadius.all(
             Radius.circular(15),
           ),
           boxShadow: [
             BoxShadow(
-              color: Color(0xff0B409C),
+              color: textColor2,
               blurRadius: 5,
               spreadRadius: 1,
-              offset: Offset(0, 4),
+              offset: Offset(0, 3),
             ),
           ],
         ),
